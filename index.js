@@ -6,6 +6,11 @@ let result = document.getElementById("result");
 function calculateAge() {
 
     let birthDate = new Date(userInput.value);
+    if (isNaN(birthDate)) {
+        console.log("The input is empty, please fill in!");
+        result.innerHTML = "The input is empty, please fill in!";
+        return; 
+    }
 
     let d1 = birthDate.getDate();
     let m1 = birthDate.getMonth() + 1;
